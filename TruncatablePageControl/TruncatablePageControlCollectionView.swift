@@ -90,8 +90,17 @@ class TruncatablePageControlCollectionView: UICollectionView {
     }
     
     func moveTo(page: Int) {
-        currentPage = page
-        reloadData()
+        switch page - currentPage {
+        case 1:
+            moveToNext()
+        case -1:
+            moveToPrev()
+        case 0:
+            break
+        default:
+            currentPage = page
+            reloadData()
+        }
     }
     
     func moveToNext() {
