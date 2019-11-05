@@ -19,40 +19,32 @@
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="MxM-3D-J6W">
-                                <rect key="frame" x="34.5" y="322" width="345" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MxM-3D-J6W">
+                                <rect key="frame" x="8" y="322" width="398" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHv-v7-4V0">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="30"/>
                                         <state key="normal" title="Top"/>
                                         <connections>
                                             <action selector="didTapMoveToTop" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7C-bg-tJV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-hV-YzL">
-                                        <rect key="frame" x="104" y="0.0" width="31" height="30"/>
-                                        <state key="normal" title="Prev"/>
-                                        <connections>
-                                            <action selector="didTapMoveToTop" destination="BYZ-38-t0r" eventType="touchUpInside" id="C06-uK-8eu"/>
-                                            <action selector="didTapPrev" destination="BYZ-38-t0r" eventType="touchUpInside" id="fyP-bQ-bFi"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRi-cn-1eX">
-                                        <rect key="frame" x="104" y="0.0" width="31" height="30"/>
+                                        <rect key="frame" x="99.5" y="0.0" width="99.5" height="30"/>
                                         <state key="normal" title="Prev"/>
                                         <connections>
                                             <action selector="didTapPrev" destination="BYZ-38-t0r" eventType="touchUpInside" id="4oy-Eq-c93"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzf-id-Y5O">
-                                        <rect key="frame" x="209" y="0.0" width="32" height="30"/>
+                                        <rect key="frame" x="199" y="0.0" width="99.5" height="30"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
                                             <action selector="didTapNext" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3L-Gf-zfX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQW-TM-f5q">
-                                        <rect key="frame" x="315" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="298.5" y="0.0" width="99.5" height="30"/>
                                         <state key="normal" title="Last"/>
                                         <connections>
                                             <action selector="didTapMoveToLast" destination="BYZ-38-t0r" eventType="touchUpInside" id="ASO-SW-Nbe"/>
@@ -71,9 +63,11 @@
                         <constraints>
                             <constraint firstItem="mJW-4v-ER7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Apv-Zs-GWT"/>
                             <constraint firstItem="9IS-kZ-nP7" firstAttribute="top" secondItem="mJW-4v-ER7" secondAttribute="bottom" constant="32" id="L9g-fk-oXv"/>
+                            <constraint firstAttribute="trailing" secondItem="MxM-3D-J6W" secondAttribute="trailing" constant="8" id="PzS-hs-iEy"/>
                             <constraint firstItem="9IS-kZ-nP7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ey6-8B-iGe"/>
                             <constraint firstItem="mJW-4v-ER7" firstAttribute="top" secondItem="MxM-3D-J6W" secondAttribute="bottom" constant="32" id="fys-ZY-UJb"/>
                             <constraint firstItem="mJW-4v-ER7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="k8c-SV-qrr"/>
+                            <constraint firstItem="MxM-3D-J6W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="kFW-Ua-ShH"/>
                             <constraint firstItem="MxM-3D-J6W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z3T-v1-DuV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
