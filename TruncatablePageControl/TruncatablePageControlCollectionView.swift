@@ -79,7 +79,8 @@ class TruncatablePageControlCollectionView: UICollectionView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        register(UINib(nibName: "TruncatablePageControlCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "dotCell")
+        let bundle = Bundle(for: TruncatablePageControlCollectionViewCell.self)
+        register(UINib(nibName: "TruncatablePageControlCollectionViewCell", bundle: bundle), forCellWithReuseIdentifier: "dotCell")
         delegate = self
         dataSource = self
         let flowLayout = UICollectionViewFlowLayout()
