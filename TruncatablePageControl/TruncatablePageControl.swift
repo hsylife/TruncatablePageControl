@@ -46,7 +46,8 @@ public class TruncatablePageControl: UIView {
 
 extension TruncatablePageControl {
     func commonInit() {
-        let view = Bundle.main.loadNibNamed("TruncatablePageControl", owner: self, options: nil)?[0] as! UIView
+        let bundle = Bundle(for: TruncatablePageControl.self)
+        let view = bundle.loadNibNamed("TruncatablePageControl", owner: self, options: nil)?[0] as! UIView
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         addSubview(view)
