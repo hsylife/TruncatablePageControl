@@ -24,7 +24,7 @@ public class TruncatablePageControl: UIView {
             collectionView.currentPage = currentPage
         }
     }
-    public var currentPageDotColor: UIColor = UIColor.systemBlue
+    public var currentPageDotColor: UIColor = UIColor.blue
     
     public override func awakeFromNib() {
         super.awakeFromNib()

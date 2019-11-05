@@ -190,9 +190,9 @@ extension TruncatablePageControlCollectionView: UICollectionViewDelegate, UIColl
         case .none:
             return UIColor.clear
         case .large(selected: true):
-            return currentPageDotColor ?? UIColor.systemBlue
+            return currentPageDotColor ?? UIColor.blue
         default:
-            return UIColor.systemGray
+            return UIColor.gray
         }
     }
 }

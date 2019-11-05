@@ -20,24 +20,32 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="MxM-3D-J6W">
-                                <rect key="frame" x="86.5" y="322" width="241" height="30"/>
+                                <rect key="frame" x="34.5" y="322" width="345" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-hV-YzL">
-                                        <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
-                                        <state key="normal" title="Prev"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal" title="Top"/>
                                         <connections>
+                                            <action selector="didTapMoveToTop" destination="BYZ-38-t0r" eventType="touchUpInside" id="C06-uK-8eu"/>
                                             <action selector="didTapPrev" destination="BYZ-38-t0r" eventType="touchUpInside" id="fyP-bQ-bFi"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRi-cn-1eX">
+                                        <rect key="frame" x="104" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="Prev"/>
+                                        <connections>
+                                            <action selector="didTapPrev" destination="BYZ-38-t0r" eventType="touchUpInside" id="4oy-Eq-c93"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzf-id-Y5O">
-                                        <rect key="frame" x="105" y="0.0" width="32" height="30"/>
+                                        <rect key="frame" x="209" y="0.0" width="32" height="30"/>
                                         <state key="normal" title="Next"/>
                                         <connections>
                                             <action selector="didTapNext" destination="BYZ-38-t0r" eventType="touchUpInside" id="G3L-Gf-zfX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQW-TM-f5q">
-                                        <rect key="frame" x="211" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="315" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="Last"/>
                                         <connections>
                                             <action selector="didTapMoveToLast" destination="BYZ-38-t0r" eventType="touchUpInside" id="ASO-SW-Nbe"/>
