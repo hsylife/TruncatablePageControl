@@ -21,8 +21,7 @@ A Truncatable Page Control written in Swift 5.
 ```swift
 pageControl.numberOfPages = 1000
 pageControl.currentPage = 0
-pageControl.moveToNext()
-// or, pageControl.moveTo(page: 999)
+pageControl.moveToNext() // or, pageControl.moveTo(page: 999)
 
 ```
 
