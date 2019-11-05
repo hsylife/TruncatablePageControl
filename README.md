@@ -7,7 +7,7 @@ A Truncatable Page Control written in Swift 5.
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/hsylife/TruncatablePageControl)
 
 ## Features
-- Can handle a ton of pages.
+- An instagram like page control can handle a ton of pages.
 - Swift 5.
 
 ## Screenshots
@@ -31,6 +31,22 @@ pageControl.moveToNext() // or, pageControl.moveTo(page: 999)
 
 ## License
 MIT
+
+## install
+### cocoapods
+```Podfile
+platform :ios, "11.0" 
+use_frameworks!
+
+target 'YourTargetName' do
+pod 'TruncatablePageControl'
+end
+```
+
+### carthage
+```Cartfile
+github "hsylife/TruncatablePageControl"
+```
 
 ## Author
 - Yuta Hoshino [Twitter](https://twitter.com/hsylife) [Facebook](https://www.facebook.com/yuta.hoshino)
