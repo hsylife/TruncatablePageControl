@@ -24,7 +24,8 @@ public class TruncatablePageControl: UIView {
             collectionView.currentPage = currentPage
         }
     }
-    public var currentPageDotColor: UIColor = UIColor.blue
+    public var selectedPageDotColor: UIColor = UIColor.blue
+    public var unselectedPageDotColor: UIColor = UIColor.gray
     
     public override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,6 +56,7 @@ extension TruncatablePageControl {
         leadingConstraint.constant = config.itemSize + config.space
         trailingConstraint.constant = config.itemSize + config.space
         
-        collectionView.currentPageDotColor = currentPageDotColor
+        collectionView.selectedPageDotColor = selectedPageDotColor
+        collectionView.unselectedPageDotColor = unselectedPageDotColor
     }
 }

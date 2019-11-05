@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         pageControl.numberOfPages = 20
         pageControl.currentPage = 0
-        pageControl.currentPageDotColor = UIColor.blue
+        pageControl.selectedPageDotColor = UIColor.blue
         pageLabel.text = pageControl.collectionView.currentPage.description
     }
 

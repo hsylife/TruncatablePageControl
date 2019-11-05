@@ -25,7 +25,9 @@ class TruncatablePageControlCollectionView: UICollectionView {
             invalidateIntrinsicContentSize()
         }
     }
-    var currentPageDotColor: UIColor?
+    var selectedPageDotColor: UIColor?
+    var unselectedPageDotColor: UIColor?
+
     private var isTrancated: Bool {
         return config.maxDotNumber < numberOfPages
     }
@@ -90,8 +92,17 @@ class TruncatablePageControlCollectionView: UICollectionView {
     }
     
     func moveTo(page: Int) {
-        currentPage = page
-        reloadData()
+        switch page - currentPage {
+        case 1:
+            moveToNext()
+        case -1:
+            moveToPrev()
+        case 0:
+            break
+        default:
+            currentPage = page
+            reloadData()
+        }
     }
     
     func moveToNext() {
@@ -190,9 +201,9 @@ extension TruncatablePageControlCollectionView: UICollectionViewDelegate, UIColl
         case .none:
             return UIColor.clear
         case .large(selected: true):
-            return currentPageDotColor ?? UIColor.blue
+            return selectedPageDotColor ?? UIColor.blue
         default:
-            return UIColor.gray
+            return unselectedPageDotColor ?? UIColor.gray
         }
     }
 }
