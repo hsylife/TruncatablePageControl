@@ -5,10 +5,10 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.homepage     = "https://github.com/hsylife/TruncatablePageControl"
   s.author       = { "Yuta Hoshino" => "ythshn@gmail.com" }
-  s.source       = { :git => "https://github.com/hsylife/TruncatablePageControl.git", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/hsylife/TruncatablePageControl.git", :tag => s.version }
   s.platform     = :ios, '11.0'
   s.swift_version = '5.0'
   s.requires_arc = true
-  s.source_files = 'TruncatablePageControl/**/*.{h,m,swift}'
-  s.resources    = 'TruncatablePageControl/**/*.xib'
+  s.source_files = 'TruncatablePageControl/*.{h,m,swift}'
+  s.resources    = 'TruncatablePageControl/*.xib'
 end
