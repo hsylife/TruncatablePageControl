@@ -25,7 +25,9 @@ class TruncatablePageControlCollectionView: UICollectionView {
             invalidateIntrinsicContentSize()
         }
     }
-    var currentPageDotColor: UIColor?
+    var selectedPageDotColor: UIColor?
+    var unselectedPageDotColor: UIColor?
+
     private var isTrancated: Bool {
         return config.maxDotNumber < numberOfPages
     }
@@ -199,9 +201,9 @@ extension TruncatablePageControlCollectionView: UICollectionViewDelegate, UIColl
         case .none:
             return UIColor.clear
         case .large(selected: true):
-            return currentPageDotColor ?? UIColor.systemBlue
+            return selectedPageDotColor ?? UIColor.systemBlue
         default:
-            return UIColor.systemGray
+            return unselectedPageDotColor ?? UIColor.systemGray
         }
     }
 }
