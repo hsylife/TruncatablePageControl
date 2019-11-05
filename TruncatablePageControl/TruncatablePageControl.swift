@@ -14,32 +14,32 @@ public class TruncatablePageControl: UIView {
     @IBOutlet private var trailingConstraint: NSLayoutConstraint!
     @IBOutlet var collectionView: TruncatablePageControlCollectionView!
     private let config = LayoutConfig()
-    var numberOfPages = 7 {
+    public var numberOfPages = 7 {
         didSet {
             collectionView.numberOfPages = numberOfPages
         }
     }
-    var currentPage = 0 {
+    public var currentPage = 0 {
         didSet {
             collectionView.currentPage = currentPage
         }
     }
-    var currentPageDotColor: UIColor = UIColor.systemBlue
+    public var currentPageDotColor: UIColor = UIColor.systemBlue
     
     public override func awakeFromNib() {
         super.awakeFromNib()
         commonInit()
     }
     
-    func moveTo(page: Int) {
+    public func moveTo(page: Int) {
         collectionView.moveTo(page: page)
     }
     
-    func moveToNext() {
+    public func moveToNext() {
         collectionView.moveToNext()
     }
     
-    func moveToPrev() {
+    public func moveToPrev() {
         collectionView.moveToPrev()
     }
 }
