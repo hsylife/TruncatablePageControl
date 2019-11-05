@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pageControl.numberOfPages = 10000
-        pageControl.currentPage = 9999
-        pageControl.currentPageDotColor = UIColor.systemBlue
+        pageControl.numberOfPages = 20
+        pageControl.currentPage = 0
+        pageControl.currentPageDotColor = UIColor.blue
         pageLabel.text = pageControl.collectionView.currentPage.description
     }
 
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapMoveToLast() {
-        pageControl.moveTo(page: 9999)
+        pageControl.moveTo(page: pageControl.numberOfPages - 1)
         pageLabel.text = pageControl.collectionView.currentPage.description
     }
     

@@ -22,9 +22,16 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="74" translatesAutoresizingMaskIntoConstraints="NO" id="MxM-3D-J6W">
                                 <rect key="frame" x="34.5" y="322" width="345" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-hV-YzL">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHv-v7-4V0">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                         <state key="normal" title="Top"/>
+                                        <connections>
+                                            <action selector="didTapMoveToTop" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7C-bg-tJV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYI-hV-YzL">
+                                        <rect key="frame" x="104" y="0.0" width="31" height="30"/>
+                                        <state key="normal" title="Prev"/>
                                         <connections>
                                             <action selector="didTapMoveToTop" destination="BYZ-38-t0r" eventType="touchUpInside" id="C06-uK-8eu"/>
                                             <action selector="didTapPrev" destination="BYZ-38-t0r" eventType="touchUpInside" id="fyP-bQ-bFi"/>
