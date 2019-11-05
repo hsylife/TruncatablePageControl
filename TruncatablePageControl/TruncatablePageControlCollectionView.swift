@@ -20,7 +20,7 @@ class TruncatablePageControlCollectionView: UICollectionView {
     }
     var numberOfPages = 8 {
         didSet {
-            currentPage = min(currentPage, numberOfPages - 1)
+            currentPage = max(0, min(currentPage, numberOfPages - 1))
             reloadData()
             invalidateIntrinsicContentSize()
         }
