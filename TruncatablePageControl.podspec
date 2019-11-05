@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '11.0'
   s.swift_version = '5.0'
   s.requires_arc = true
-  s.source_files = 'TruncatablePageControl/**/*.{h,m}'
+  s.source_files = 'TruncatablePageControl/**/*.{h,m,swift}'
   s.resources    = 'TruncatablePageControl/**/*.xib'
 end
