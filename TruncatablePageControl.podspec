@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "TruncatablePageControl"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Truncatable page control."
   s.license      = "MIT"
   s.homepage     = "https://github.com/hsylife/TruncatablePageControl"
@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '11.0'
   s.swift_version = '5.0'
   s.requires_arc = true
-  s.source_files = 'TruncatablePageControl/*.{h,m,swift}'
-  s.resources    = 'TruncatablePageControl/*.xib'
+  s.source_files = "TruncatablePageControl/*.swift"
+  s.resources    = "TruncatablePageControl/*.xib"
 end
