@@ -118,12 +118,26 @@ class TruncatablePageControlCollectionView: UICollectionView {
         }()
         currentPage += 1
         
+        let cells = offSetDistance == 0.0 ? [] : makeWidthResizedCells(isMovingToNext: true)
         UIView.animate(withDuration: 0.3, animations: {
             self.contentOffset.x += offSetDistance
+            cells.forEach {
+                $0.dotView.layer.cornerRadius = $0.widthConstraint.constant / 2.0
+                $0.layoutIfNeeded()
+            }
         }, completion: { _ in
             self.reloadData()
             self.contentOffset.x -= offSetDistance
         })
+    }
+    
+    func makeWidthResizedCells(isMovingToNext: Bool) -> [TruncatablePageControlCollectionViewCell] {
+        return [0, 1, 2, 3, allCellCount - 4, allCellCount - 3, allCellCount - 2, allCellCount - 1].compactMap {
+            let cell = cellForItem(at: IndexPath(row: $0, section: 0)) as? TruncatablePageControlCollectionViewCell
+            let gap = isMovingToNext ? 1 : -1
+            cell?.widthConstraint.constant = getDotSize(IndexPath(row: $0 - gap, section: 0))
+            return cell
+        }
     }
     
     func moveToPrev() {
@@ -138,8 +152,14 @@ class TruncatablePageControlCollectionView: UICollectionView {
             }
         }()
         currentPage -= 1
+        
+        let cells = offSetDistance == 0.0 ? [] : makeWidthResizedCells(isMovingToNext: false)
         UIView.animate(withDuration: 0.3, animations: {
             self.contentOffset.x -= offSetDistance
+            cells.forEach {
+                $0.dotView.layer.cornerRadius = $0.widthConstraint.constant / 2.0
+                $0.layoutIfNeeded()
+            }
         }, completion: { _ in
             self.reloadData()
             self.contentOffset.x += offSetDistance
