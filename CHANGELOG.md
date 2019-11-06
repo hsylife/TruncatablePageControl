@@ -1,4 +1,17 @@
-0.1.3 Release notes (2019-10-03)
+0.1.4 Release notes (2019-11-06)
+=============================================================
+
+### API Breaking Changes
+* Nothing
+
+### Enhancements
+
+* Dot size animation when auto scrolling
+
+### Bugfixes
+* Nothing
+
+0.1.3 Release notes (2019-11-03)
 =============================================================
 
 ### API Breaking Changes
@@ -12,7 +25,7 @@
 * Nothing
 
 
-0.1.2 Release notes (2019-10-03)
+0.1.2 Release notes (2019-11-03)
 =============================================================
 
 ### API Breaking Changes
@@ -27,7 +40,7 @@
 * Podspec definition
 
 
-0.1.0 Release notes (2019-10-03)
+0.1.0 Release notes (2019-11-03)
 =============================================================
 
 ### API Breaking Changes
